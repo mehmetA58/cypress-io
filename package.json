@@ -9,6 +9,7 @@
     "babel-loader": "^8.2.2",
     "babel-preset-react": "^6.24.1",
     "cypress": "^8.6.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^1.6.2"
   },
   "scripts": {
