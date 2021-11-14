@@ -20,3 +20,22 @@ import "./commands";
 // require('./commands')
 require("cypress-xpath");
 import "./commands";
+before(() => {
+    //butun testlerden önce 1 kez
+});
+beforeEach(() => {
+    //herbir testten önce
+    const emailInputXPath = "//input[@type='email' and @name='username'] ";
+    const passwordInputXPath = "//input[@name='password']";
+    const submitButtonXPath = "//input[@type='submit']";
+    cy.visit("https://test.iyikisordun.com/login.php");
+    cy.xpath(emailInputXPath).type("cypress_test_1@gmail.com");
+    cy.xpath(passwordInputXPath).type("admin_123");
+    cy.xpath(submitButtonXPath).click();
+});
+after(() => {
+    //butun testler tamamlandıgında
+});
+afterEach(() => {
+    //her bir testen önce 1 kez
+});
