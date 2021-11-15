@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
 context("Timeout", () => {
-    it("Default timeout degistirme", () => {});
+    Cypress.config("defaultCommandTimeout", 3000);
+    it("Default timeout degistirme", () => {
+        cy.get(".m-0.text-darka").should("have.text", "Dashboard");
+    });
 });
